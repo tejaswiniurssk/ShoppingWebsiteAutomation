@@ -6,4 +6,5 @@ Feature: Accounts Page Feature
 @accounts
   Scenario: Accounts page title
     Given user is on Accounts page
+    When my account label is displayed
     Then user clicks on home page icon

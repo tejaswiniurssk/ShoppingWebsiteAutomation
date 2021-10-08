@@ -25,6 +25,11 @@ public class LoginPageSteps{
     	title = loginPage.getLoginPageTitle();
         System.out.println("Page title is: " + title);
     }
+    
+    @When("forgot your password link is displayed")
+    public void forgot_your_password_link_is_displayed() {
+        Assert.assertTrue(loginPage.isForgotPwdLinkExist());
+    }
 
     @Then("page title should be {string}")
     public void page_title_should_be(String expectedTitleName) {
@@ -32,20 +37,17 @@ public class LoginPageSteps{
 
     }
 
-    @Then("forgot your password link should be displayed")
-    public void forgot_your_password_link_should_be_displayed() {
-        Assert.assertTrue(loginPage.isForgotPwdLinkExist());
-    }
+    
 
     @When("user logs into the application")
     public void user_logs_into_the_application() {
     	configReader = new ConfigReader();
     	prop = configReader.init_prop();
     	
-        String un = prop.getProperty("username");
-        String pw = prop.getProperty("password");
+        String username = prop.getProperty("username");
+        String password = prop.getProperty("password");
         
-        loginPage.enterLoginCredentials(un, pw);
+        loginPage.enterLoginCredentials(username, password);
     }
 
     @Then("user will be navigated to Accounts Page")

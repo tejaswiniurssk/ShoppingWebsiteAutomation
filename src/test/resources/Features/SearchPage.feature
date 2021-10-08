@@ -2,9 +2,9 @@ Feature: Search Page Feature
 
   Background:
     Given user has already logged in to application
-    Then user clicks on home page icon
-    When user enters the Item "Printed Dress"
-    Then user clicks on search icon
+    And user clicks on home page icon
+    And user enters the Item "Printed Dress"
+    And user clicks on search icon
     
 
   Scenario: Go to Searched Item Page

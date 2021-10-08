@@ -9,6 +9,7 @@ import com.qa.factory.DriverFactory;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class OrderPageSteps {
 	String title;
@@ -19,6 +20,12 @@ public class OrderPageSteps {
         title = orderPage.getTitle();
         System.out.println("Page Title is: "+ title);
         Assert.assertEquals("Order - My Store", title);
+    }
+    
+    @When("cart summery is displayed")
+    public void cart_summery_is_displayed() {
+    	boolean flag = orderPage.cartTitle();
+    	Assert.assertTrue(flag);
     }
 
     @Then("searched Item and cart Item are {string}")

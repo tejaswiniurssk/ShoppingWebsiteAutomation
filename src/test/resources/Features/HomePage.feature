@@ -2,10 +2,11 @@ Feature: Home Page Feature
 
   Background:
     Given user has already logged in to application
-    Then user clicks on home page icon
+    And user clicks on home page icon
 
   Scenario: Home Page Title
     Given user is on Home Page
+    When homePage logo is displayed
     Then home page title should be "My Store"
 
   

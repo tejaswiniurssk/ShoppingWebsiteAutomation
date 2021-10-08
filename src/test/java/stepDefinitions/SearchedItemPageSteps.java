@@ -1,10 +1,13 @@
 package stepDefinitions;
 
+import org.junit.Assert;
+
 import com.pages.SearchedItemPage;
 import com.qa.factory.DriverFactory;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class SearchedItemPageSteps {
 	
@@ -19,6 +22,12 @@ public class SearchedItemPageSteps {
 	    @Then("user clicks on add to cart")
 	    public void user_clicks_on_add_to_cart() throws InterruptedException {
 	        searchedItemPage.addToCart();
+	    }
+	    
+	    @When("{string} is Displayed")
+	    public void is_displayed(String string) {
+	    	boolean flag = searchedItemPage.itemIsDisplayed();
+	    	Assert.assertTrue(flag);
 	    }
 
 }

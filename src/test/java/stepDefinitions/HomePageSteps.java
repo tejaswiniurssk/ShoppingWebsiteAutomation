@@ -19,11 +19,19 @@ public class HomePageSteps {
 	String title;
     private HomePage homePage = new HomePage(DriverFactory.getDriver());
 
+    
+    
     @Given("user is on Home Page")
     public void user_is_on_home_page() {
         title = homePage.homePageTitle();
         System.out.println("Home Page title is: " + title);
         Assert.assertEquals("My Store", title);
+    }
+    
+    @When("homePage logo is displayed")
+    public void homePage_logo_is_displayed() {
+    	boolean flag = homePage.homePageIcon();
+    	Assert.assertTrue(flag);
     }
     
     @Then("home page title should be {string}")

@@ -3,30 +3,42 @@ package com.pages;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class OrderPage {
 	private WebDriver driver;
 
     // 1. By Locators: Object Repository
-    private By cartItemName = By.xpath("//td//p//a[contains(text(),'Printed Dress')]");
+    //private By cartItemName = By.xpath("//td//p//a[contains(text(),'Printed Dress')]");
+    
+    @FindBy(xpath = "//td//p//a[contains(text(),'Printed Dress')]")
+    private List<WebElement> cartItemName;
+    
+    @FindBy(xpath = "//h1[@id='cart_title']")
+    private WebElement cartTitle;
     
     // 2. Constructor of the page class:
     public OrderPage(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     // 3. page actions: features(behavior) of the page the form of methods:
     public String getTitle(){
         return driver.getTitle();
     }
+    
+    public boolean cartTitle() {
+    	return cartTitle.isDisplayed();
+    }
 
     public List<String> correctItemCheck() throws InterruptedException {
         Thread.sleep(1000);
         List<String> cartList = new ArrayList<>();
-        List<WebElement> cartValue = driver.findElements(cartItemName);
+        List<WebElement> cartValue = cartItemName;
 
         for (WebElement e : cartValue) {
             String text = e.getText();

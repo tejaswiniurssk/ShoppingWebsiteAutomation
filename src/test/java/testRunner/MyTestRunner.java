@@ -12,7 +12,9 @@ import org.junit.runner.RunWith;
         plugin = {"pretty",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
         		"timeline:test-output-thread/"
-        }
+        },
+        monochrome = true,
+        dryRun = false
 )
 public class MyTestRunner {
 
