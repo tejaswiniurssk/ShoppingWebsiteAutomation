@@ -35,20 +35,24 @@ public class LoginPage {
 
 	// 3. page actions: features(behavior) of the page the form of methods:
 
+	//get title of login page
 	public String getLoginPageTitle() {
 		return driver.getTitle();
 	}
 
+	//check is forgot password link is displayed
 	public boolean isForgotPwdLinkExist() {
 		return forgotPwdLink.isDisplayed();
 	}
 
+	//send username, password and click on signIn Button
 	public void enterLoginCredentials(String username, String password) {
 		emailId.sendKeys(username);
 		this.password.sendKeys(password);
 		signInButton.click();
 	}
 
+	//get Accounts page title to check if it is on correct landing page
 	public String AccountsPageTitle() {
 		return driver.getTitle();
 

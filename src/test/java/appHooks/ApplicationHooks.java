@@ -19,12 +19,14 @@ public class ApplicationHooks {
     private ConfigReader configReader;
     Properties prop;
 
+    //Initialize property file 
     @Before(order = 0)
     public void getProperty() {
         configReader = new ConfigReader();
         prop = configReader.init_prop();
     }
 
+    //read the property file and get browsername and url 
     @Before(order = 1)
     public void launchBrowser() {
         String browserName = prop.getProperty("browser");
@@ -33,12 +35,13 @@ public class ApplicationHooks {
         driver = driverFactory.init_driver(browserName, url);
     }
 
-
+    //quit the browser once after TC execution
     @After(order = 0) //executed 2nd
     public void quitBrowser() {
         driver.quit();
     }
 
+    //If TC fails, then take a screenshot and save
     @After(order = 1) // executed 1st
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {

@@ -27,14 +27,16 @@ public class OrderPage {
     }
 
     // 3. page actions: features(behavior) of the page the form of methods:
+    //get the title of the page
     public String getTitle(){
         return driver.getTitle();
     }
-    
+   //check if cart title is displayed
     public boolean cartTitle() {
     	return cartTitle.isDisplayed();
     }
 
+    //check if the searched item and cart item are same
     public List<String> correctItemCheck() throws InterruptedException {
         Thread.sleep(1000);
         List<String> cartList = new ArrayList<>();

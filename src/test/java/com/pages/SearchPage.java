@@ -1,6 +1,5 @@
 package com.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,10 +25,12 @@ public class SearchPage {
         return driver.getTitle();
     }
 
+    //check if searched item is displayed
     public boolean itemDisplayed(){
         return searchedItem.isDisplayed();
     }
-
+    
+    //select the item that was searched
     public SearchedItemPage goToSearchedItem(){
         searchedItem.click();
         return new SearchedItemPage(driver);

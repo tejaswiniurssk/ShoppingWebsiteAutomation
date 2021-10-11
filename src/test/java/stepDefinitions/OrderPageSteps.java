@@ -2,7 +2,7 @@ package stepDefinitions;
 
 import java.util.List;
 
-import org.junit.Assert;
+import org.testng.Assert;
 
 import com.pages.OrderPage;
 import com.qa.factory.DriverFactory;

@@ -28,10 +28,12 @@ public class AccountsPage {
         return driver.getTitle();
     }
     
+    //check if the label is displayed
     public boolean accountLabelisDisplayed() {
     	return myAccountsLabel.isDisplayed();
     }
 
+    //check if the homepage icon is displayed
     public HomePage clickOnHomePageIcon(){
         homePageIcon.click();
         return new HomePage(driver);

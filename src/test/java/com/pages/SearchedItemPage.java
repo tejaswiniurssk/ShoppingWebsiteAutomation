@@ -29,15 +29,18 @@ public class SearchedItemPage {
     }
 
     // 3. page actions: features(behavior) of the page the form of methods:
+    //get the title of the page
     public String getTitle(){
         return driver.getTitle();
     }
     
+    //check if the searched item is displayed
     public boolean itemIsDisplayed() {
     	return itemLabel.isDisplayed();
     	
     }
 
+    //add the item to the cart
     public OrderPage addToCart() throws InterruptedException {
         Thread.sleep(1000);
         addToCartBtn.click();

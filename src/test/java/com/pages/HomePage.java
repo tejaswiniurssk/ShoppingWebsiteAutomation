@@ -31,22 +31,28 @@ public class HomePage {
 
     // 3. page actions: features(behavior) of the page the form of methods:
     
+    //get the title of home page
     public String homePageTitle(){
         return driver.getTitle();
     }
+    
+    //check if the home page icon is displayed
     public boolean homePageIcon() {
     	return homePageIcon.isDisplayed();
     }
 
+  //check if the search bar is displayed
     public boolean searchBarIsDisplayed(){
         return searchBar.isDisplayed();
     }
 
+    //click on search bar and send the item name
     public void userEntersItem(String itemName){
         searchBar.click();
         searchBar.sendKeys(itemName);
     }
 
+    //click on search icon
     public SearchPage clickOnSearch(){
         search.click();
 

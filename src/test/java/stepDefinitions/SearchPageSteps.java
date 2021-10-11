@@ -1,6 +1,6 @@
 package stepDefinitions;
 
-import org.junit.Assert;
+import org.testng.Assert;
 
 import com.pages.SearchPage;
 import com.qa.factory.DriverFactory;

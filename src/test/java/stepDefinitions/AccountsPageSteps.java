@@ -2,7 +2,7 @@ package stepDefinitions;
 
 import java.util.Properties;
 
-import org.junit.Assert;
+import org.testng.Assert;
 
 import com.pages.AccountsPage;
 import com.pages.LoginPage;

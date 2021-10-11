@@ -1,98 +1,126 @@
 $(document).ready(function() {
 CucumberHTML.timelineItems.pushArray([
   {
-    "id": "6f1e2882-6900-4444-8de5-ca810b923e6f",
-    "feature": "Login page feature",
-    "scenario": "Login page title",
-    "start": 1633710264185,
-    "group": 1,
-    "content": "",
-    "tags": "",
-    "end": 1633710269190,
-    "className": "passed"
-  },
-  {
-    "id": "8565965b-4a1b-488c-bb70-18f7760c4fcf",
-    "feature": "Home Page Feature",
-    "scenario": "Search an Item",
-    "start": 1633710253932,
-    "group": 1,
-    "content": "",
-    "tags": "",
-    "end": 1633710264174,
-    "className": "passed"
-  },
-  {
-    "id": "5c9fbec6-465e-4c0e-b88b-d9c3079d3b06",
-    "feature": "Login page feature",
-    "scenario": "Login with correct credentials",
-    "start": 1633710269237,
-    "group": 1,
-    "content": "",
-    "tags": "",
-    "end": 1633710276134,
-    "className": "passed"
-  },
-  {
-    "id": "80aff49e-9a17-4f20-b5f1-33c63ff7f30c",
-    "feature": "Home Page Feature",
-    "scenario": "Home Page Title",
-    "start": 1633710244158,
-    "group": 1,
-    "content": "",
-    "tags": "",
-    "end": 1633710253897,
-    "className": "passed"
-  },
-  {
-    "id": "33a4234b-96e7-46c1-8a40-24a986f6d0ee",
+    "id": "a3f86c18-b51a-479e-a518-acba701ddc3d",
     "feature": "Searched Item Page Feature",
     "scenario": "add Item to cart",
-    "start": 1633710306589,
-    "group": 1,
+    "start": 1633952882395,
+    "group": 21,
     "content": "",
     "tags": "",
-    "end": 1633710324051,
+    "end": 1633952929572,
+    "className": "failed"
+  },
+  {
+    "id": "c254979c-130c-4da6-aadd-6f085c35acae",
+    "feature": "Home Page Feature",
+    "scenario": "Home Page Title",
+    "start": 1633952882395,
+    "group": 15,
+    "content": "",
+    "tags": "",
+    "end": 1633952929255,
     "className": "passed"
   },
   {
-    "id": "c61e3f26-6a38-4375-b7e1-df9e5faad52c",
+    "id": "a40e76d6-944a-490d-8e0f-411f7587f7f6",
+    "feature": "Login page feature",
+    "scenario": "Login with correct credentials",
+    "start": 1633952882290,
+    "group": 18,
+    "content": "",
+    "tags": "",
+    "end": 1633952928993,
+    "className": "passed"
+  },
+  {
+    "id": "7da3812c-f2db-4d87-b41b-e725297c59f5",
+    "feature": "Login page feature",
+    "scenario": "Login page title",
+    "start": 1633952882399,
+    "group": 17,
+    "content": "",
+    "tags": "",
+    "end": 1633952927693,
+    "className": "passed"
+  },
+  {
+    "id": "05d4623b-fdfc-4a8d-9f85-f0ca604b0fd1",
     "feature": "Order Page Feature",
     "scenario": "validate the cart item",
-    "start": 1633710276173,
-    "group": 1,
+    "start": 1633952882396,
+    "group": 19,
     "content": "",
     "tags": "",
-    "end": 1633710294554,
-    "className": "passed"
+    "end": 1633952929601,
+    "className": "failed"
   },
   {
-    "id": "e37a27d2-a27b-44f5-9c55-6dd4d2f98a5b",
-    "feature": "Search Page Feature",
-    "scenario": "Go to Searched Item Page",
-    "start": 1633710294571,
-    "group": 1,
-    "content": "",
-    "tags": "",
-    "end": 1633710306564,
-    "className": "passed"
-  },
-  {
-    "id": "5b6506ef-0173-4001-961a-7034dc5e37fe",
+    "id": "fd46c3dd-ad82-4855-a167-770c916531a7",
     "feature": "Accounts Page Feature",
     "scenario": "Accounts page title",
-    "start": 1633710234687,
-    "group": 1,
+    "start": 1633952882402,
+    "group": 14,
     "content": "",
     "tags": "@accounts,",
-    "end": 1633710244090,
+    "end": 1633952929379,
+    "className": "passed"
+  },
+  {
+    "id": "3a682731-3d64-45e4-82d9-fd5320bba2ef",
+    "feature": "Search Page Feature",
+    "scenario": "Go to Searched Item Page",
+    "start": 1633952882395,
+    "group": 20,
+    "content": "",
+    "tags": "",
+    "end": 1633952947090,
+    "className": "passed"
+  },
+  {
+    "id": "6bda7283-b970-4b84-bf55-fb3e7ad8a6ad",
+    "feature": "Home Page Feature",
+    "scenario": "Search an Item",
+    "start": 1633952882395,
+    "group": 16,
+    "content": "",
+    "tags": "",
+    "end": 1633952929055,
     "className": "passed"
   }
 ]);
 CucumberHTML.timelineGroups.pushArray([
   {
-    "id": 1,
-    "content": "Thread[main,5,main]"
+    "id": 14,
+    "content": "Thread[TestNG-PoolService-0,5,main]"
+  },
+  {
+    "id": 15,
+    "content": "Thread[TestNG-PoolService-1,5,main]"
+  },
+  {
+    "id": 16,
+    "content": "Thread[TestNG-PoolService-2,5,main]"
+  },
+  {
+    "id": 17,
+    "content": "Thread[TestNG-PoolService-3,5,main]"
+  },
+  {
+    "id": 18,
+    "content": "Thread[TestNG-PoolService-4,5,main]"
+  },
+  {
+    "id": 19,
+    "content": "Thread[TestNG-PoolService-5,5,main]"
+  },
+  {
+    "id": 20,
+    "content": "Thread[TestNG-PoolService-6,5,main]"
+  },
+  {
+    "id": 21,
+    "content": "Thread[TestNG-PoolService-7,5,main]"
   }
 ]);
 });

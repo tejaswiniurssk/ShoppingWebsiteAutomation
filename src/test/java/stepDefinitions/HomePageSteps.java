@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.junit.Assert;
+import org.testng.Assert;
 
 import com.pages.HomePage;
 import com.qa.factory.DriverFactory;
